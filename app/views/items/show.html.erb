@@ -1,0 +1,23 @@
+<div class="container displayArticle">
+<p class="h1">
+  <%= @item.name %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= simple_format(@item.description) %>
+  
+</p>
+
+<%= link_to 'Item List', items_path, class: "btn-sm btn-dark" %>
+      <div style= "text-align:center;" class="dropdown">
+  <button style="margin-bottom:5px;" class="btn-sm btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Author Controls
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item"><%= link_to 'Edit', edit_item_path(@item), class: 'btn-sm btn-light' %></a></li>
+
+  </ul>
+</div>
+ </div>
+ <br>

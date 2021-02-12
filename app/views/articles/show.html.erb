@@ -1,0 +1,22 @@
+<div class="container displayArticle">
+<p class="h1">
+  <%= @article.title %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= simple_format(@article.text) %>
+  
+</p>
+<%= link_to 'Edit', edit_article_path(@article), class: "btn-sm btn-dark"  %>
+<%= link_to 'Back', articles_path, class: "btn-sm btn-dark" %><br><br>
+ </div>
+ <br>
+ <div class="container-sm commentSection">
+<h4>Notes</h4>
+<%= render @article.comments %>
+ 
+<h4>Add a note:</h4>
+<%= render 'comments/form' %>
+ 
+</div>
