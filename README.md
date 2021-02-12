@@ -6,6 +6,8 @@ Hey! Thanks for checking out my code for The Grand Tome. This is a fun little pl
 * A blog-like posting area for quests, including a comments section for notes.
 * A sticky-note-esque posting area for items. This is slightly more front facing and aimed at linking specific items to your players.
 
-* Ruby version = 3.0.0
+### Ruby / Rails Version
+
+* Ruby version 3.0.0
 * Rails version 6.1.1
 
