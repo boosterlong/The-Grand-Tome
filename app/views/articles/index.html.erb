@@ -8,10 +8,17 @@
   <% @articles.each do |article| %>
      
       <div class="card bg-light mb-3" style="width: 18rem; margin: 10px"><div class="card-body text-center"><%= link_to article.title, article_path(article), class: "card-title btn btn-dark" %></div>
-      <%= link_to 'Edit', edit_article_path(article), class: "btn btn-outline-dark btn-sm" %>
-      <%= link_to 'Delete', article_path(article), class: "btn btn-outline-dark btn-sm",
+            <div style= "text-align:center;" class="dropdown">
+  <button style="margin-bottom:5px;" class="btn-sm btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Author Controls
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-article"><%= link_to 'Edit', edit_article_path(article), class: 'btn-sm btn-light' %></a></li>
+    <li><a class="dropdown-article"><%= link_to 'Delete', article_path(article),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %><div class="card-footer text-muted"><%= article.text[0...140] %>...</div>
+              data: { confirm: 'Are you sure?' }, class: 'btn-sm btn-light' %></a></li>
+  </ul>
+</div><div class="card-footer text-muted"><%= article.text[0...140] %>...</div>
               </div>
     
   

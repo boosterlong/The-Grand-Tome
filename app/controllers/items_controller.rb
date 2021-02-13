@@ -1,9 +1,7 @@
 class ItemsController < ApplicationController
-
-  http_basic_authenticate_with name: "blake", password: "secret", except: [:index, :show]
  
   def index
-   @item = Item.all
+   @item = Item.order(:name)
   end
  
   def show
@@ -49,4 +47,7 @@ class ItemsController < ApplicationController
     def item_params
       params.require(:item).permit(:name, :description)
     end
-end
+
+    http_basic_authenticate_with name: "blake", password: "secret", except: [:index, :show]
+
+  end
