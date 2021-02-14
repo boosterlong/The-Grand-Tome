@@ -23,7 +23,7 @@
   </ul>
 </div>
               <div class="card-footer text-muted">
-      <%= (shortDesc = item.description[0...140])%> <%= link_to '>', item_path(item), class: "btn-sm", style: "text-decoration:none;" %> </div>
+      <%= (shortDesc = truncate(item.description, length: 140))%> <%= link_to '>', item_path(item), class: "btn-sm", style: "text-decoration:none;" %> </div>
       </div>
 
   

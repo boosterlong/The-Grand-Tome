@@ -18,7 +18,7 @@
               method: :delete,
               data: { confirm: 'Are you sure?' }, class: 'btn-sm btn-light' %></a></li>
   </ul>
-</div><div class="card-footer text-muted"><%= article.text[0...140] %>...</div>
+</div><div class="card-footer text-muted"><%= truncate(article.text, length: 140 ) %></div>
               </div>
     
   
