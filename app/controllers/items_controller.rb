@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   def index
    @item = Item.order(:name)
   end
- 
+
   def show
     @item = Item.find(params[:id])
   end
@@ -35,7 +35,8 @@ class ItemsController < ApplicationController
       render 'edit'
     end
   end
- 
+
+  
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
@@ -45,7 +46,7 @@ class ItemsController < ApplicationController
  
   private
     def item_params
-      params.require(:item).permit(:name, :description)
+      params.require(:item).permit(:name, :description, :tags)
     end
 
     http_basic_authenticate_with name: "blake", password: "secret", except: [:index, :show]
