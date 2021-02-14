@@ -1,6 +1,6 @@
 # The Grand Tome
 
-Hey! Thanks for checking out my code for The Grand Tome. This is a fun little playground of mine to learn Rails with a goal of having a function DM tool.
+Hey! Thanks for checking out my code for The Grand Tome. This is a fun little playground of mine to learn Rails with a goal of having a functional DM tool.
 
 ## Currently the only services it provides is:
 * A blog-like posting area for quests, including a comments section for notes.
