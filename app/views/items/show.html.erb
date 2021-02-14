@@ -8,11 +8,8 @@
   <%= simple_format(@item.description) %>
   
 </p>
-Tags:
-<button class="btn-sm btn btn-outline-primary"><%= @item.tags %></button>
-<br>
-<br>
-<%= link_to 'Back to items', items_path, class: " btn btn-sm btn-dark" %>
+
+<%= link_to 'Item List', items_path, class: "btn-sm btn-dark" %>
       <div style= "text-align:center;" class="dropdown">
   <button style="margin-bottom:5px;" class="btn-sm btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     Author Controls

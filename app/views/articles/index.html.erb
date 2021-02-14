@@ -1,33 +1,26 @@
+<div style="background-color: rgba(255, 255, 255, 0.8);;"><h1 style="text-align:center">Potential Quest Hooks
+<div><%= link_to 'New article', new_article_path, class: "btn btn-dark btn-sm" %></h1></div>
+<br></div>
 
-<div style="background-color: rgba(255, 255, 255, 0.8);;">
-<h1 style="text-align:center">Quests</h1>
 
-<div>
-<h1 style="text-align:center"><%= link_to 'New article', new_article_path, class: "btn btn-dark btn-sm" %>
-</h1>
-</div>
-</div>
-<br>
-
-<div class="d-flex flex-wrap justify-content-center"><% @articles.each do |article| %>
-<div class="card bg-light mb-3" style="width: 18rem; margin: 10px">
-<div class="card-body text-center"><%= link_to article.title, article_path(article), class: "card-title btn btn-dark" %>
-</div>
-
-<div class="dropdown" style="text-align:center;"><button aria-expanded="false" class="btn-sm btn-dark dropdown-toggle" data-bs-toggle="dropdown" id="dropdownMenuButton1" style="margin-bottom:5px;" type="button">Author Controls</button>
-<ul aria-labelledby="dropdownMenuButton1" class="dropdown-menu">
-<li><a class="dropdown-article"><%= link_to 'Edit', edit_article_path(article), class: 'btn-sm btn-light' %></a>
-</li>
-
-<li><a class="dropdown-article"><%= link_to 'Delete', article_path(article),
+<div class="d-flex flex-wrap justify-content-center">
+ 
+  <% @articles.each do |article| %>
+     
+      <div class="card bg-light mb-3" style="width: 18rem; margin: 10px"><div class="card-body text-center"><%= link_to article.title, article_path(article), class: "card-title btn btn-dark" %></div>
+            <div style= "text-align:center;" class="dropdown">
+  <button style="margin-bottom:5px;" class="btn-sm btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Author Controls
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-article"><%= link_to 'Edit', edit_article_path(article), class: 'btn-sm btn-light' %></a></li>
+    <li><a class="dropdown-article"><%= link_to 'Delete', article_path(article),
               method: :delete,
-              data: { confirm: 'Are you sure?' }, class: 'btn-sm btn-light' %></a>
-</li>
-</ul>
-</div>
-
-<div class="card-footer text-muted"><%= truncate(article.text, length: 140 ) %>
-</div>
-</div>
-<% end %>
+              data: { confirm: 'Are you sure?' }, class: 'btn-sm btn-light' %></a></li>
+  </ul>
+</div><div class="card-footer text-muted"><%= truncate(article.text, length: 140 ) %></div>
+              </div>
+    
+  
+  <% end %>
 </div>
